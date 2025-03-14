@@ -7,7 +7,7 @@ public class Board {
 
 	private final int HEIGHT = 20;
 	private final int WIDTH = 10;
-	private Color[][] grid;
+	Color[][] grid;
 
 	public Board() {
 		grid = new Color[HEIGHT][WIDTH];
@@ -44,7 +44,7 @@ public class Board {
 			if (full) {
 				linesCleared++;
 				for (int shiftY = y; shiftY > 0; shiftY--) {
-					grid[shiftY] = grid[shiftY -1].clone();
+					grid[shiftY] = grid[shiftY - 1].clone();
 				}
 				grid[0] = new Color[WIDTH];
 			}
