@@ -16,7 +16,7 @@ public class TetrisGUI extends JPanel implements ActionListener {
 	public TetrisGUI() {
 		setSize(new Dimension(WIDTH, HEIGHT));
 		setBackground(Color.BLACK);
-		timer = new Timer(500, this);
+		timer = new Timer(300, this);
 		timer.start();
 	}
 	
@@ -33,10 +33,10 @@ public class TetrisGUI extends JPanel implements ActionListener {
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if (positionY + 4 * TITLE_SIZE < HEIGHT) {
-			positionY += TITLE_SIZE;
-		} else {
-			positionY = 0;
+		if (positionY + 4 * TITLE_SIZE >= HEIGHT) { 
+		    positionY = 0; 
+		} else { 
+		    positionY += TITLE_SIZE; 
 		}
 		repaint();
 	}
